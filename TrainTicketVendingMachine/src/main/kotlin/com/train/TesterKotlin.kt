@@ -1,18 +1,36 @@
 package com.train
 
-import java.util.Scanner
-
 fun main() {
-    print("Please enter number of tickets : ")
-    val scanner = Scanner(System.`in`)
-    val numberOfTickets = scanner.nextInt()
 
-    print("How many round-trip tickets : ")
-    val roundTrip = scanner.nextInt()
-    val trainTicket = TrainTicket(numberOfTickets, roundTrip)
+    var isContinue = true
 
-    println("Total tickets: $numberOfTickets\nRound-trip: $roundTrip" +
-            "\nTotal: ${trainTicket.calculateTotalPrice()}")
+    while(isContinue) {
+        print("Please enter number of tickets : ")
+        val numberOfTickets = readLine()!!.toInt()
+
+        if(numberOfTickets <= 0){
+            println("you should book at least 1 ticket.")
+            continue
+        }
+
+        print("How many round-trip tickets : ")
+        val roundTrip = readLine()!!.toInt()
+        val trainTicket = TrainTicket(numberOfTickets, roundTrip)
+
+        println("Total tickets: $numberOfTickets\nRound-trip: $roundTrip" +
+                "\nTotal: ${trainTicket.calculateTotalPrice()}")
+
+        println("Continue? (Y/N)")
+        var nextResult = readLine()
+        isContinue = when {
+            nextResult.equals("Y") -> true
+            nextResult.equals("y") -> true
+            nextResult.equals("N") -> false
+            nextResult.equals("n") -> false
+            else -> false
+        }
+        println("user terminate the program.")
+    }
 }
 
 class TrainTicket(private var numberOfTickets : Int,
