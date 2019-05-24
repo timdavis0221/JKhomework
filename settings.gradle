@@ -1,1 +1,1 @@
-include ':app', ':TrainTicketVendingMachine'
+include ':app', ':TrainTicketVendingMachine', ':PostBox'
