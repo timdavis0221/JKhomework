@@ -5,7 +5,7 @@ import java.util.Scanner;
 public class PostOffice {
 
     public static void main(String[] args) {
-        System.out.println("Hi, please enter your box for validating");
+        System.out.println("Hi, please enter your box size for validating");
         System.out.println("first enter the length of box : ");
         Scanner scanner = new Scanner(System.in);
         float length = scanner.nextFloat();
