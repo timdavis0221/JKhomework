@@ -14,7 +14,7 @@ public class BoxPresenter {
     }
 
     public void findSuitableBoxFromModel(float length, float width, float height) {
-        System.out.println("Presenter : find SuitableBox From Model");
+        System.out.println("Presenter : try to find suitableBox from Model");
         boxModel.setBoxSize(length, width, height);
         returnCheckResult();
     }
