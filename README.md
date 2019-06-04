@@ -1,4 +1,4 @@
 # JKhomework
 
-1. Trending Machine
+1. Ticket Vending Machine
 2. Postbox
