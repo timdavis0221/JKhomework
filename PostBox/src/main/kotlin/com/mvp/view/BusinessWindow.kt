@@ -2,7 +2,7 @@ package com.mvp.view.kt
 
 import com.mvp.presenter.kt.BoxPresenter
 
-class Window : IBoxView {
+class BusinessWindow : IBoxView {
 
     private val boxPresenter: BoxPresenter? by lazy { BoxPresenter(this) }
 

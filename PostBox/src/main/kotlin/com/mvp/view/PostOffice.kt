@@ -13,6 +13,6 @@ private fun enterPostOffice() {
     println("finally enter the height of box :")
     val height = readLine()?.toFloat()
 
-    val window = Window()
-    window.receivedBox(length, width, height)
+    val businessWindow = BusinessWindow()
+    businessWindow.receivedBox(length, width, height)
 }
